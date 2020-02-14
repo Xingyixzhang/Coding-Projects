@@ -87,3 +87,40 @@ namespace MidTerm
             DateTime myDateAndTime = (DateTime)Convert.ChangeType(s, typeof(DateTime));
             Console.WriteLine("The string value {0} when converted to a Date " +
                               "becomes {1}", s, myDateAndTime);
+            /* 
+             * Namespace #2: System.Collections.Generic
+             * Description: Contains interfaces and classes that define generic collections,
+             *              allowing users to create strongly-typed collections that provide
+             *              better Type Safety and performance than non-generic strongly-typed
+             *              collections.
+            */
+
+            // Function #1: List<T>.Remove* methods
+            /* Description: Remove(T item) -- to remove the first occurrence of the item from the list. item can be null for reference types.
+             *              RemoveAll(Predicate<T> match) -- Remove all elements that match the conditions defined by the specified predicate.
+             *              RemoveAt(index) -- Remove the element at the specific index of the list.
+             *              RemoveRange(startingIndex, #of elements to remove)
+             */
+
+            // Create a list containing different types of dinosaurs.
+            List<string> dinos = new List<string>();
+
+            // Adding elements in the list.
+            dinos.Add("T-rex");
+            dinos.Add("Amarga");
+            dinos.Add("Mamenchi");
+            dinos.Add("deinonychus");
+            dinos.Add("myDinosaur");
+            dinos.Add("yourDinosaur");
+            dinos.Add("RandomDino");
+            dinos.Add("Hisdinosaur");
+            DisplayDinos(dinos);
+
+            dinos.Remove("T-rex");
+            DisplayDinos(dinos);
+            dinos.RemoveAt(2);  // remove "deinonychus"
+            DisplayDinos(dinos);
+            dinos.RemoveRange(0, 2);    // remove Amarga and Mamenchi.
+            DisplayDinos(dinos);
+            dinos.RemoveAll(EndsWithDinosaur);  // remove all names ending with dinosaurs.
+            DisplayDinos(dinos);
