@@ -5,15 +5,24 @@ namespace InClass_Assignment
     public class Person
     {
         // Properties referenced from https://docs.microsoft.com/en-us/dotnet/csharp/properties
-        public string firstName { get; set; }
+        public string firstName { get; set; }   // Auto preperty syntax, compiler generates the storage location for the field that backs up the property.
+                                                // And the compiler implements the body of the get and set accessors.
+        // public string nickName { get; set; } = string.Empty;     // initialize the property value to be an empty string rather than null.
+        // Specific initialization is most useful for read-only properties.
         private string middlename;
         private string lastname;
+        // Read-write property: 
         public string middleName
         {
+            // get -- retrieves the property value; set -- assigns the property value.
             get => middlename;
             set => middlename = value; // expression-bodied members.
         }
-        
+        // Read-Only property:
+        /* public class Person{
+        *       public string firstName { get; private set; }
+        *  }
+        */
         public string lastName
         {
             get { return lastname; }
