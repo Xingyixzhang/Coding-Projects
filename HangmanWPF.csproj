@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\hangmanStart.png" />
+    <None Remove="images\head.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\hangmanStart.png" />
+    <Resource Include="images\head.png" />
+  </ItemGroup>
+
+</Project>
