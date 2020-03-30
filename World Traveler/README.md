@@ -1,4 +1,4 @@
-### OverView --
+# OverView --
  
 World Traveler Web App is to focus on practicing developing controllers. (Home, City, Traveler)
 
@@ -63,4 +63,30 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
 
 ### Configuring Routes
 
+1. ASP.NET Core Routing Engine
+
+   1) Routing determines which controller and action should be called to handle a request.
+   2) Routing Decides what Parameters to be passed to an action.
+   3) A route is a RULE. Routes are Configurable: Centrally in the Startup.cs &/| Locally by using Attributes.
+   4) Routeing can link URLs and content more effectively.
+
+2. Search Engine Optimization
+
+3. Configuring Routes by Using Convention-Based Routing
+
+4. Using Routes to Pass Parameters
+
+5. COnfiguring Routes by using Attributes
+
 ### Writing Action Filters
+
+1. Action Filters Overview
+
+2. Create and Use Action Filters
+
+### Common Issue and Troubleshooting Tip
+
+1. Issue: Navigate to an existing action though get an HTTP 404 Not Found Error. --> A Configuration-Based Route never took effect.
+2. Troubleshooting tip: Verify that the routes are configured correctly in the MVC app.
+		    	Ensure to Add Configuration-Based Routes in the correct ORDER.
+			Generally speaking, the most specific routes should be added FIRST and the lease specific should be added LAST.
