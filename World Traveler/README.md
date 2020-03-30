@@ -30,8 +30,8 @@ World Traveler Web App is to focus on practicing developing controllers. (Home, 
 
 Web Browser --request--> Controller Object Instantiated --> *Action Method Selected* --model object--> View --HTML/o*--> Browser.
 
-** A Model Binder determines the values passed to action as parameters.
-** The action often creates a new instance of a model class.
+\** A Model Binder determines the values passed to action as parameters.
+\** The action often creates a new instance of a model class.
 
 2. Writing Controller Actions
 
@@ -53,14 +53,14 @@ Model Binders locate parameters in a
   4) Posted Files
 
 An action is called if the name and type of a parameter from the request matches the declared parameter declared in the action method.
-* <Behind the Scenes> The model binder uses the RouteData Property -- Contains 'Value' Property and Encapsulate info about the route.
+\* <Behind the Scenes> The model binder uses the RouteData Property -- Contains 'Value' Property and Encapsulate info about the route.
 
 4. ViewBag & ViewData --> Pass Info to Views; ~~ Dictionary
 
 ViewBag.Title = "Title";		ViewData["Title"] = "Title";
 <p> Title is: @ViewBag.Title </p>	<p> Title is: @ViewData["Title"] </p>
 
-** Note that the calling methods for ViewBag and ViewData may be mix-matched.
+\** Note that the calling methods for ViewBag and ViewData may be mix-matched.
 
 ### Configuring Routes
 
@@ -101,19 +101,19 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
    
 4. Using Routes to Pass Parameters
    1) Access the segment variables' values by 2 means: using the RouteData.Values collection / model binding  to pass values to action parameters.
-   2) Example: string id = (string)RouteData.Values["id"];   return Content("id: " + id); // Use RouteData.Values collection.
-               public IActionResult Print(string id) { }  // Use Model Binding.
-      string parameter: /Example/Print/1   relative URL <- the action returns: id: 1
-                        /Example/Print/    relative URL <- the action returns: id:
-      int parameter:    /Example/Print/1   relative URL <- the action returns: id: 1 
-                        /Example/Print/a   relative URL <- the action returns: id: 0 
-			/Example/Print     relative URL <- the action returns: id: 0 // int is a value type, cannot store null values
-      nullable parameter: /Example/Print/1 relative URL <- the action returns: id: 1
-                          /Example/Print/a relative URL <- the action returns: id: 
-			  /Example/Print   relative URL <- the action returns: id: 
-      optional parameter: /Example/Print/1 relative URL <- the action returns: id: 
-                          /Example/Print/a relative URL <- the action returns: id: 444 
-			  /Example/Print   relative URL <- the action returns: id: 444 
+   - 2) Example: string id = (string)RouteData.Values["id"];   return Content("id: " + id); // Use RouteData.Values collection.
+               - public IActionResult Print(string id) { }  // Use Model Binding.
+      - string parameter: /Example/Print/1   relative URL <- the action returns: id: 1
+                        - /Example/Print/    relative URL <- the action returns: id:
+      - int parameter:    /Example/Print/1   relative URL <- the action returns: id: 1 
+                        - /Example/Print/a   relative URL <- the action returns: id: 0 
+			- /Example/Print     relative URL <- the action returns: id: 0 // int is a value type, cannot store null values
+      - nullable parameter: /Example/Print/1 relative URL <- the action returns: id: 1
+                          - /Example/Print/a relative URL <- the action returns: id: 
+			  - /Example/Print   relative URL <- the action returns: id: 
+      - optional parameter: /Example/Print/1 relative URL <- the action returns: id: 
+                          - /Example/Print/a relative URL <- the action returns: id: 444 
+			  - /Example/Print   relative URL <- the action returns: id: 444 
 
 5. Configuring Routes by using Attributes
 
