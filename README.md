@@ -11,3 +11,8 @@
 
 1. Ball Game Poll -- Configure Middleware and Services.
 2. World Traveler -- Develop Controllers.
+
+## Web Development (HTML, CSS, JavaScript) Projects
+
+1. Hikers
+2. Self-Help
