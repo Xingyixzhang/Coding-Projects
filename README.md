@@ -11,6 +11,7 @@
 
 1. Ball Game Poll -- Configure Middleware and Services.
 2. World Traveler -- Develop Controllers.
+3. Cities Information Worldwide -- Develop Views.
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 
