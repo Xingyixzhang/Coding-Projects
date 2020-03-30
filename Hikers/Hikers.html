@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hikers</title>
+        <link rel="stylesheet" type="text/css" href="hikers.css">
+        <script> /* Add javascript codes. */
+            topButton = document.getElementById("topbtn");
+            
+            /* Show the button when the user scrolls down 20px from the top: */
+            window.onscroll = function(){scrollFunction()};
+            
+            function scrollFunction(){
+                if (document.body.scrollTop > 20
+                   || document.documentElement.scrollTop > 20){
+                    topButton.style.display = "block";
+                }
+                else{
+                    topButton.style.display = "none";
+                }
+            }
+            /* Scroll to the top of doc when the user clicks on the button: */
+            function topFunction(){
+                /* document.body.scrollTop = 0;   /* FOR SAFARI. */
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera.
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <input class="topbtn" type="button" onclick="topFunction()" value="Back to Top">
+            <h1>Hikers</h1>
+            <h2>National Parks</h2>
+            <nav class="row">
+            <div class="NationalParks"><a href="https://www.nps.gov/olym/index.htm" title="Olympic National Park">
+                <img src="../Hikers/images/Olympic%20National%20park.jpeg" alt="Olympic national park" style="width:80%;"><br>Olympic National Park</a></div>
+            <div class="NationalParks">
+                <a href="https://www.nps.gov/mora/index.htm" title="Mt. Rainier National Park">
+                <img src="../Hikers/images/reflection%20lake1.jpg" alt="Reflection Lake" style="width:80%;">
+                <br>Mt. Rainier National Park</a></div>
+            <div class="NationalParks"><a href="https://www.nps.gov/noca/index.htm" title="North Cascades National Park">
+                <img src="../Hikers/images/North%20Cascades%20boundry.jpg" alt="North cascades national park boundry" style="width:80%;"><br>North Cascades National Park</a></div>
+            </nav>
+        </header>
+        <section>
+                <h2>Seasonal Trails</h2>
+                <div class="Season">
+                    <h3><img src="images/spring.jpg" alt="spring hike with vocano rock" style="width:80%;"><a href="https://www.wta.org/go-outside/seasonal-hikes/spring-destinations" title="Spring Hikes"><br>Spring</a></h3>
+                <p>From waterfalls to early wildflowers, spring is an astonishing season to get a jump start on your All-Year-Round adventures! <i>&lt;Especially on lower elevation trails&gt;</i></p>
+                </div>
+                <div class="Season">
+                    <h3><img src="images/summer.jpg" alt="summer trail in the woods" style="width:80%;"><a href="https://www.wta.org/go-outside/seasonal-hikes/summer-destinations" title="Summer Hikes"><br>Summer</a></h3>   <p>The Sun is shining and trails are snow-free. Let's keep busy <strong><em>ALL! Summer! Long!</em></strong></p>
+                </div>
+                <div class="Season">
+                    <h3><img src="images/fall.jpg" alt="Fall hike" style="width:80%;"><a href="https://www.wta.org/go-outside/seasonal-hikes/fall-destinations" title="Fall Hikes"><br>Autumn</a></h3>
+                <p>It is finally that time of year...Incredible Colors, Weird Fungus, and Mild Temperatures... Find a trail and let's explore the nature's secrets.</p>
+                </div>
+                <div class="Season">
+                <h3><img src="images/winter.jpg" alt="winter snow fun" style="width:80%;"><a href="https://www.wta.org/go-outside/seasonal-hikes/winter-destinations" title="Winter Hikes"><br>Winter</a></h3>
+                <p>Ever thought about trying out some snowshoeing adventures? No need to hesitate, let's bring it on!</p>
+                </div>
+        </section>
+        <section>
+                <h2>Trail Types</h2>
+                <div class="Trails">
+                    <img src="images/Maple%20Pass.jpg" alt="Foot Trail at Maple Pass" style="width:90%;">
+                    <h3 class="top-right"><a href="https://www.traillink.com/stateactivity/wa-walking-trails/" title="foot trails"><b>Foot Trails</b></a></h3>
+                    <p class="top-right2">This is the typical type of trails that come to people's mind when<br>we talk about hiking. Varying from place to place, the distance,<br>incline, terrain, and difficulty can differ for this type of trails.</p>
+                </div>
+                <div class="Trails">
+                    <img src="images/bike.jfif" alt="Bikeways" style="width:90%;">
+                    <h3 class="top-right"><a href="https://www.traillink.com/stateactivity/wa-bike-trails/" title="bike trails"><b>Bikeways</b></a></h3>
+                <p class="caption">Also called <b>Bike Paths</b>, are trails that allow bicyclists<br>(Some may be multi-use before giving way to bike or foot-only<br>specific paths). For those multi-use trails, be sure to<br>always practice good hiking etiquette and know your right-of-way.</p>
+                </div>
+                <div class="Trails">
+                    <img src="images/boardwalk.jfif" alt="Boardwalks" style="width:90%;">
+                    <h3 class="top-right"><a href="https://www.onlyinyourstate.com/washington/boardwalks-in-wa/" title="12 Boardwalks in Washington State"><b>Boardwalks</b></a></h3>
+                    <p class="top-right2"><b>Boardwalks</b> are walkways that cross over water or marshy ground.</p>
+                    <p class="caption">Typically, they are made of wood or other smooth materials and accessible to wheelchairs. We can normally find them close to parking lots, so do expect larger crowds. Special Note: Stay on boardways to protect native plants and animals.</p>
+                </div>
+                <div class="Trails">
+                    <img src="images/interpretive%20trails.jfif" alt="Interpretive trails with statue" style="width:90%;">
+                    <h3><a href="https://www.wta.org/go-outside/kids/kids-hikes/ten-easy-interpretive-trails" title="ten easy interpretive/ nature trails"><b>Interpretive/Nature Trails</b></a></h3>
+                    <p class="caption">These trails tell a story.<br>While you are on the trail, you may find signs on the path sharing information<br>about the world around you, what it used to be, how it becomes what it is now,<br>and what's to hope in the <b>future</b>.<br>Certain trails also include statues to help paint the scene.</p>
+                </div>
+                <div class="Trails">
+                    <img src="images/multiuse.jfif" alt="Multi-Use Trails" style="width:90%;">
+                    <h3><a href="https://www.seattle.gov/transportation/projects-and-programs/programs/bike-program/how-to-use-multi-use-trails" title="Multi-Use trails guide -- Seattle"><b>Multi-Use Trails</b></a></h3>
+                <p class="caption">Hikers, bicyclists, and horses share the dirt on these multi-use trails. <br><b><em>Know your right of way!</em></b> Be mindful of <i>trail etiquette.</i> Bikes and<br>horses can use some trails and roads in parks but be sure to check for signs.</p>
+                </div>
+                <div class="Trails">
+                    <img src="images/offroad.jpg" alt="Offroad hiking" style="width:90%;">
+                    <h3 class="top-right"><a href="https://www.alltrails.com/us/washington/off-road-driving" title="Offroad hiking in WA"><b>Hiking OffRoad</b></a></h3>
+                <P class="top-right2">These off-trail areas in the wilderness of national parks<br>will give you a more rugged experience. Check with the park<br>to ensure you obtain permits,<br>follow wilderness rules, and <em>leave No Trace Principles.</em></P>
+                </div>
+        </section>
+        <footer id="main-footer">
+                <p>&copy; | Follow me on my 
+                    <a href="https://github.com/Xingyixzhang" title="github.com" target="_blank">Github</a> and 
+                    <a href="https://www.linkedin.com/in/xingyi-zhang/" title="Follow me on LinkedIn">LinkedIn</a>!</p>
+        </footer>
+    </body>
+</html>
