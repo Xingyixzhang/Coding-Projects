@@ -76,11 +76,11 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
                                        with a default route named default and the template: {controller=Home}/{action=Index}/{id?}.
 
 2. Search Engine Optimization (SEO)
-   1) Use a meaningful <title> element in the <head>section of the HTML. 
-   2) Use accurate <meta name=“keywords“> tag in the <head> element to include keywords that describe the content of the page 
-   3) Use accurate <meta name=“description“> tag in the <head> element to include a sentence that describes the content of the page
+   1) Use a meaningful title element in the head section of the HTML. 
+   2) Use accurate meta name="keywords" tag in the head element to include keywords that describe the content of the page 
+   3) Use accurate meta name="description" tag in the head element to include a sentence that describes the content of the page
    4) Choose a domain name that includes keywords
-   5) Use keywords in the <h1>, <h2>, or <h3> heading elements
+   5) Use keywords in the h1, h2, h3 heading elements
    6) Ensure that URLs do not include Globally Unique Identifiers (GUIDs) or long query text 
 
 3. Configuring Routes by Using Convention-Based Routing
@@ -101,7 +101,7 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
    
 4. Using Routes to Pass Parameters
    1) Access the segment variables' values by 2 means: using the RouteData.Values collection / model binding  to pass values to action parameters.
-   - 2) Example: string id = (string)RouteData.Values["id"];   return Content("id: " + id); // Use RouteData.Values collection.
+   2) Example: - string id = (string)RouteData.Values["id"];   return Content("id: " + id); // Use RouteData.Values collection.
                - public IActionResult Print(string id) { }  // Use Model Binding.
       - string parameter: /Example/Print/1   relative URL <- the action returns: id: 1
                         - /Example/Print/    relative URL <- the action returns: id:
@@ -116,12 +116,49 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
 			  - /Example/Print   relative URL <- the action returns: id: 444 
 
 5. Configuring Routes by using Attributes
+   1) ASP.NET Core MVC supports 2 types of routing: Convention-Based Routing and Attribute-Based Routing.
+   2) Route Attribute -> specify the route for a specific action.
+   3) Route Attribute can pass parameters to an action [Route("My/{param}")] (MyController, SomeMethod(string param))
+   4)                 can get several segment variables [Route("My/{param1}/{param2:int}")] (.., SomeMethod(string param1, int param2))
+   5)                 can configure a segment variable to be optional by using ? [Route("My/{param}/{param2?}")]
+   6) All routes in a controller class should start with the SAME PREFIX.
+   7) If a common Prefix is set on entire controller class by [Route] attribute above the class, /My/Method1 good; /Method1 will fail.
+   8) Http[Verb] instead of [Route] -> Limit access to the action to a specific HTTP Verb. \* [Route] and [HttpVerb] can be combined.
+      - Action to run only when HTTP verb is GET --> [HttpGet] Attribute
+      - Action to run only when HTTP verb is POST --> [HttpPost] Attribute
 
 ### Writing Action Filters
 
 1. Action Filters Overview
+   1) MVC programming model enforces the Seperation of Concerns.
+   2) Cross-Cutting Concerns -- where requirements are relavant to many parts of app and cut across logical boundaties.
+   3) Cross-Cutting Concerns Examples -- Authorization, Logging, Caching.
+   4) Filters are MVC classes used to manage cross-cutting concerns in the web app.
+   5) Apply a filter to an action by annotating the action method w/ an appropriate attribute. (ex. [SimpleActionFilter])
+   6) Filters run within a filter pipeline, Some Filter Types:
+      - Authorization Filters: Run Before any other filters and Before the code in the action method. // Check User's Access Rights.
+      - Resource Filters: Run After the Authorization Before any other. // Performance. IResourceFilter/IAsyncResourceFilter interface.
+      - Action Filters: Run Before and After the code in the action method. // Manipulate parameters. IActionFilter/IAsyncActionFilter.
+      - Exception Filters: Run only if an action or other filter throw an exception. // Handle Errors. I(Async)ExceptionFilter.
+      - Result Filters: Run Before and After an action result is run. // IResultFilter or IASyncResultFilter interface implemented.
+      -> Authorization -> Resource -> Model Binding -> Action ->Exception -> Result -> Result Execution
+   7) Create custom filter classes/ Use existing filter classes.
 
 2. Create and Use Action Filters
+public class SimpleActionFilter: ActionFilterAttribute
+{
+   public override void OnActionExecuting (ActionExecutingContextfilterContext) { 
+      Debug.WriteLine("This Event Fired: OnActionExecuting"); //before the action is run 
+   }
+   public override void OnActionExecuted(ActionExecutedContextfilterContext) { 
+      Debug.WriteLine("This Event Fired: OnActionExecuted"); //after the action is run 
+   }
+   public override void OnResultExecuted(ResultExecutedContextfilterContext) { 
+      Debug.WriteLine("This Event Fired: OnResultExecuted");//after the result is returned 
+   }
+   // there is also OnResultExecuting…
+}
+*A more common scenario would be to write messages to a log file. Check: Visual Studio Output Window
 
 ### Common Issue and Troubleshooting Tip
 
