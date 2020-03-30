@@ -1,0 +1,82 @@
+.Season h3{
+    font: 1.5em Ariel, sans-serif;
+    margin: 0;
+}
+.Season{
+    background: #D6F7E0;
+    padding: 25px;
+    width: 400px;
+    color: chocolate;
+    margin-bottom: 25px;
+}
+.NationalParks{
+    float: left;
+    width: 30%;
+    padding: 5px;
+    width: 400px;
+    text-align: center;
+    color: chocolate;
+    margin-bottom: 15px;
+}
+.Trails{
+    float: left;
+    width: 25%;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    width: 500px;
+}
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .topbtn{
+                display: block; /* How to hide by default? none did not work. */
+                position: fixed;
+                bottom: 30px;
+                right: 40px;
+                z-index: 99;   /* Make sure it does not overlap. */
+                border: none;
+                outline: none; /* Remove border and outline. */
+                background-color: beige;
+                color: cadetblue;
+                cursor: pointer;  /* Add a mouse pointer on hover. */
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+            .topbtn:hover{
+                background-color: burlywood; /* Add a burlywood background on hover. */
+            }
+            .top-right{
+                position: absolute;
+                color: black;
+                text-transform: uppercase;
+                font: 1.0em Ariel, sans-serif;
+                top: 5px;
+                right: 50px;
+            }
+            .top-right2{
+                position: absolute;
+                text-align: right;
+                color: black;
+                font: 0.6em Ariel, sans-serif;
+                top: 40px;
+                right: 50px;
+            }
+            .caption {
+                font: 0.8em Ariel, sans-serif;
+                color: chocolate;
+            }
+            #main-footer{
+                background-color: darkgrey;
+	            color: #fff;
+	            text-align: center;
+	            padding:20px;
+                position: absolute;
+                width: 100%;
+            }
