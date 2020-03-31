@@ -17,3 +17,7 @@
 
 1. Hikers
 2. Self-Help
+
+## Python Project
+
+1. (Forked) TicTacToe Console Game
