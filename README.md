@@ -2,10 +2,11 @@
 
 ## C# Coding Projects
 
-1. Test BMI value and return weight categories.
-2. Date addition calculator.
-3. Gomoku Game App.
-4. Hangman Game WPF App.
+1. Zodiac Signs, simple console app to identify your zodiac sign.
+2. Test BMI value and return weight categories.
+3. Date addition calculator.
+4. Gomoku Game App.
+5. Hangman Game WPF App.
 
 ## ASP.NET Core MVC Practice Projects
 
