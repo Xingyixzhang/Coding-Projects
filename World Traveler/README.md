@@ -86,7 +86,9 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
 3. Configuring Routes by Using Convention-Based Routing
    1) Use Convention-Based Routing by Defining routes in Startup.cs Configure Method.
    2) Convention-Based Routes may contain following properties: name, template, defaults, constraints, and dataTokens
-   3) Example: app.UseMvc(routes =>
+   3) Example: 
+   ```cs
+   	       app.UseMvc(routes =>
                {
 	          routes.MapRoute(
 		     name: "myRoute", // Assigns name to a route, NOT involved in Matching/Request Forwarding.
@@ -95,6 +97,7 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
 		     constraints: new { param = "[0-9]+" },
 		     dataTokens: new { locale = "en-US" });  // Specify the data tokens for the route, Containing a name and a value.
 	       });
+   ```
    4) If 404 errors received for every request (regardless of the relative URL), Check the ROUTES CONFIGURED in the app.
    5) Routes are evaluated in the order in which they are added.
    6) To fix a route to a single controller, apecify a value for the controller variable in the default property.
@@ -118,9 +121,9 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
 5. Configuring Routes by using Attributes
    1) ASP.NET Core MVC supports 2 types of routing: Convention-Based Routing and Attribute-Based Routing.
    2) Route Attribute -> specify the route for a specific action.
-   3) Route Attribute can pass parameters to an action [Route("My/{param}")] (MyController, SomeMethod(string param))
-   4)                 can get several segment variables [Route("My/{param1}/{param2:int}")] (.., SomeMethod(string param1, int param2))
-   5)                 can configure a segment variable to be optional by using ? [Route("My/{param}/{param2?}")]
+   3) Route Attribute can pass parameters to an action ```cs [Route("My/{param}")] (MyController, SomeMethod(string param))```
+   4)                 can get several segment variables ``` cs[Route("My/{param1}/{param2:int}")] (.., SomeMethod(string param1, int param2)) ```
+   5)                 can configure a segment variable to be optional by using ? ```cs [Route("My/{param}/{param2?}")] ```
    6) All routes in a controller class should start with the SAME PREFIX.
    7) If a common Prefix is set on entire controller class by [Route] attribute above the class, /My/Method1 good; /Method1 will fail.
    8) Http[Verb] instead of [Route] -> Limit access to the action to a specific HTTP Verb. \* [Route] and [HttpVerb] can be combined.
