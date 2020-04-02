@@ -11,7 +11,7 @@ World Traveler Web App is to focus on practicing developing controllers. (Home, 
 
 ## Controller Notes:
 
-### MVC Quick Overview
+### MVC Quick Overview -- Convention over Configuration
 
 1. Controller: (A class containing actions (public methods))
    1) Responsible for processing a web request by interacting with the model, then pass the result to the view.
@@ -145,6 +145,7 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
    7) Create custom filter classes/ Use existing filter classes.
 
 2. Create and Use Action Filters
+
 public class SimpleActionFilter: ActionFilterAttribute
 {
    public override void OnActionExecuting (ActionExecutingContextfilterContext) { 
@@ -158,7 +159,54 @@ public class SimpleActionFilter: ActionFilterAttribute
    }
    // there is also OnResultExecuting…
 }
-*A more common scenario would be to write messages to a log file. Check: Visual Studio Output Window
+
+*A more common scenario would be to write messages to a log file. Check: Visual Studio Output Window ==============
+
+namespace MvcApplication1.ActionFilters
+{
+     public class LogActionFilter : ActionFilterAttribute
+     {
+          public override void OnActionExecuting(ActionExecutingContext filterContext)
+          {
+               Log("OnActionExecuting", filterContext.RouteData);       
+          }
+          public override void OnActionExecuted(ActionExecutedContext filterContext)
+          {
+               Log("OnActionExecuted", filterContext.RouteData);       
+          }
+          public override void OnResultExecuting(ResultExecutingContext filterContext)
+          {
+               Log("OnResultExecuting", filterContext.RouteData);       
+          }
+          public override void OnResultExecuted(ResultExecutedContext filterContext)
+          {
+               Log("OnResultExecuted", filterContext.RouteData);       
+          }
+          private void Log(string methodName, RouteData routeData)
+          {
+               var controllerName = routeData.Values["controller"];
+               var actionName = routeData.Values["action"];
+               var message = String.Format("{0} controller:{1} action:{2}", methodName, controllerName, actionName);
+               Debug.WriteLine(message, "Action Filter Log");
+          }
+     }
+}
+
+namespace MvcApplication1.Controllers
+{
+     [LogActionFilter]
+     public class HomeController : Controller
+     {
+          public ActionResult Index()
+          {
+               return View();
+          }
+          public ActionResult About()
+          {
+               return View();
+          }
+     }
+}
 
 ### Common Issue and Troubleshooting Tip
 
