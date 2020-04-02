@@ -145,7 +145,7 @@ ViewBag.Title = "Title";		ViewData["Title"] = "Title";
    7) Create custom filter classes/ Use existing filter classes.
 
 2. Create and Use Action Filters
-
+```cs
 public class SimpleActionFilter: ActionFilterAttribute
 {
    public override void OnActionExecuting (ActionExecutingContextfilterContext) { 
@@ -159,9 +159,9 @@ public class SimpleActionFilter: ActionFilterAttribute
    }
    // there is also OnResultExecuting…
 }
-
+```
 *A more common scenario would be to write messages to a log file. Check: Visual Studio Output Window ==============
-
+```cs
 namespace MvcApplication1.ActionFilters
 {
      public class LogActionFilter : ActionFilterAttribute
@@ -191,7 +191,8 @@ namespace MvcApplication1.ActionFilters
           }
      }
 }
-
+```
+```cs
 namespace MvcApplication1.Controllers
 {
      [LogActionFilter]
@@ -207,7 +208,7 @@ namespace MvcApplication1.Controllers
           }
      }
 }
-
+```
 ### Common Issue and Troubleshooting Tip
 
 1. Issue: Navigate to an existing action though get an HTTP 404 Not Found Error. --> A Configuration-Based Route never took effect.
