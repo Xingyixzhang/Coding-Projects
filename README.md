@@ -7,7 +7,8 @@
 
 ## WPF Apps
 1. Hangman Game App
-2. Gomoku Game App (Windows Form)
+2. Math Competition Game App
+3. Gomoku Game App (Windows Form)
 
 ## ASP.NET Core MVC Practice Projects
 1. Ball Game Poll -- Configure Middleware and Services.
