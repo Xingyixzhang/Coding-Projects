@@ -46,4 +46,19 @@ static class GetWord
 }
 ```
 #### MainWindow.xaml.cs
-
+1. Declare fields for the partial class MainWindow: Window.
+```cs
+public int remainingAttempt = 6;                        // Total attempts: 6.
+public string secretWord = GetWord.WordGetter();        // The random word, based on which the # of guessing spots are determined.
+public List<string> lblSpots = new List<string>();      // spots for guessing the word.
+public List<Image> hangmanBody = new List<Image>();
+```
+2. In the default constructor public MainWindow(), Initialize the components and Reset the game.
+```cs
+public MainWindow()
+{
+        InitializeComponent();
+        GameReset();
+}
+```
+3. 
