@@ -54,6 +54,7 @@ public List<string> lblSpots;      // spots for guessing the word.
 public List<Image> hangmanBody;
 ```
 2. In the default constructor public MainWindow(), **Initialize the components and Reset the game**.
+![game start page](https://github.com/Xingyixzhang/Coding-Projects/blob/master/Hangman/images/GameBegin.png "game begin page")
 ```cs
 public MainWindow()
 {
@@ -65,6 +66,8 @@ public MainWindow()
 - Assign values to the fields; 
 - Hide hangman body components; 
 - Enable all buttons.
+
+![random word generated](https://github.com/Xingyixzhang/Coding-Projects/blob/master/Hangman/images/newWordMsg.png "new word generated message")
 ```cs
         public void GameReset()
         {
@@ -108,6 +111,7 @@ public MainWindow()
         }
 ```
 5. Generate **event handlers** for each button:
+![Game in Progress](https://github.com/Xingyixzhang/Coding-Projects/blob/master/Hangman/images/Ingame.png "A screenshot when game is in progress")
 ```cs
         public void A_Click(object sender, RoutedEventArgs e)
         {
@@ -130,6 +134,7 @@ public MainWindow()
 - Check if/where the letter is in the word; 
 - Display the char in position / Body component in order;
 - Check if you have running out of attempts(lost)/ won;
+- Reveal the secret word on spots (if failed);
 - Disable all buttons;
 - Display Result message;
 - Ask the User for restart/quit.
