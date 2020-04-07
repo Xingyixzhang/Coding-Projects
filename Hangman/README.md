@@ -46,14 +46,14 @@ static class GetWord
 }
 ```
 #### MainWindow.xaml.cs
-1. Declare fields for the partial class MainWindow: Window.
+1. Initialize **fields** for the partial class MainWindow: Window.
 ```cs
-public int remainingAttempt = 6;                        // Total attempts: 6.
-public string secretWord = GetWord.WordGetter();        // The random word, based on which the # of guessing spots are determined.
-public List<string> lblSpots = new List<string>();      // spots for guessing the word.
-public List<Image> hangmanBody = new List<Image>();
+public int remainingAttempt;                        // Total attempts: 6.
+public string secretWord;        // The random word, based on which the # of guessing spots are determined.
+public List<string> lblSpots;      // spots for guessing the word.
+public List<Image> hangmanBody;
 ```
-2. In the default constructor public MainWindow(), Initialize the components and Reset the game.
+2. In the default constructor public MainWindow(), **Initialize the components and Reset the game**.
 ```cs
 public MainWindow()
 {
@@ -61,4 +61,122 @@ public MainWindow()
         GameReset();
 }
 ```
-3. 
+3. In the **GameReset** method: 
+- Assign values to the fields; 
+- Hide hangman body components; 
+- Enable all buttons.
+```cs
+        public void GameReset()
+        {
+          // Assign Values to the values:
+            secretWord = GetWord.WordGetter();
+            remainingAttempt = 6;
+            hangmanBody = new List<Image>();
+            lblSpots = new List<string>();
+          // Inform the User that a random word has been generated:
+            MessageBox.Show("A new Secret word has been generated!", "Hangman");
+            hangmanBody.Add(head);
+            hangmanBody.Add(body);
+            hangmanBody.Add(left_arm);
+            hangmanBody.Add(right_arm);
+            hangmanBody.Add(left_leg);
+            hangmanBody.Add(right_leg);
+            
+            hideHangman();
+            EnableButtons();
+            for (int i = 0; i < secretWord.Length; i++)
+            {
+                lblSpots.Add("____");
+            }
+            string temp = "";
+            foreach (string s in lblSpots) temp += s + " ";
+            spots.Content = temp;
+        }
+```
+4. Ask the User after each game for **restart/quit** option:
+```cs
+        public void RestartOrNot()
+        {
+            if (MessageBox.Show("Restart?", "Hangman", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                GameReset();
+            }
+            else
+            {
+                App.Current.MainWindow.Close();
+            }
+        }
+```
+5. Generate **event handlers** for each button:
+```cs
+        public void A_Click(object sender, RoutedEventArgs e)
+        {
+            A.IsEnabled = false;
+            UserGuess(A.Name, lblSpots);
+        }
+        private void B_Click(object sender, RoutedEventArgs e)
+        {
+            B.IsEnabled = false;
+            UserGuess(B.Name, lblSpots);
+        }
+        private void C_Click(object sender, RoutedEventArgs e)
+        {
+            C.IsEnabled = false;
+            UserGuess(C.Name, lblSpots);
+        }
+        // ... D_Click --- C_Click
+```
+6. In the **UserGuess** method:
+- Check if/where the letter is in the word; 
+- Display the char in position / Body component in order;
+- Check if you have running out of attempts(lost)/ won;
+- Disable all buttons;
+- Display Result message;
+- Ask the User for restart/quit.
+```cs
+        public void UserGuess(string guessLetter, List<string> lblSpots)
+        {
+            int len = secretWord.Length;
+            for (int i = 0; i < len; i++)
+            {
+                if (secretWord.Substring(i, 1).ToUpper() == guessLetter)
+                {
+                    lblSpots[i] = guessLetter;
+                }
+            }
+            string temp = "";
+            foreach (string s in lblSpots)
+            {
+                temp += s + " ";
+            }
+            if (temp == (string)spots.Content)
+            {
+                hangmanBody[6 - remainingAttempt].Visibility = Visibility.Visible;
+                remainingAttempt--;
+            }
+            spots.Content = temp;
+
+            if (remainingAttempt <= 0)
+            {
+                DisableButtons();
+                spots.Content = secretWord.ToUpper();
+                MessageBox.Show($"You Lost\nThe word is: {secretWord}", "Hangman", MessageBoxButton.OK, MessageBoxImage.Information);
+                RestartOrNot();
+            } // Lost
+            else
+            {
+                string wordTemp = "";
+                foreach (var ch in temp)
+                {
+                    if (Char.IsLetter(ch)) wordTemp += ch;
+                }
+                // MessageBox.Show(wordTemp);
+                if (wordTemp == secretWord.ToUpper())
+                {
+                    DisableButtons();
+                    MessageBox.Show("You Won!", "Hangman", MessageBoxButton.OK, MessageBoxImage.Information);
+                    RestartOrNot();
+                }
+            } // Won
+        }
+```
