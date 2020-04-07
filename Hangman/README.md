@@ -66,7 +66,6 @@ public MainWindow()
 - Assign values to the fields; 
 - Hide hangman body components; 
 - Enable all buttons.
-
 ![random word generated](https://github.com/Xingyixzhang/Coding-Projects/blob/master/Hangman/images/newWordMsg.png "new word generated message")
 ```cs
         public void GameReset()
