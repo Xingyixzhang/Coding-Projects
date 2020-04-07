@@ -6,7 +6,7 @@
         <Label Name="spots" HorizontalAlignment="Center" Margin="0,250,0,0" />
 ```
 ![Initial UI](https://github.com/Xingyixzhang/Coding-Projects/blob/master/Hangman/images/IniUI.png "Initial UI(without word line")
-2. The Use of Grid.Resources to help prevent (letter buttons) code redundancy:
+2. The Use of Grid.Resources to format buttons in one place, reducing code redundancy:
 ```xaml
 <Grid.Resources>
     <Style TargetType="Button">
@@ -25,4 +25,25 @@
 <Button x:Name="C" Content="C" HorizontalAlignment="Left" Margin="160,320,0,0" VerticalAlignment="Top" Click="C_Click"/>
 <!-- ...(More buttons 'D' - 'Z') -->
 ```
-## 
+## Logic Behind the Scene:
+#### GetWords.cs
+1. Created an array of strings as the words library.
+2. Use System.Random class to generate random word from the library when the method WordGetter() is called.
+```cs
+static class GetWord
+{
+    public static string[] mySecretWords = { "Bananas", "Island", "homework", "Family", "hangman", "robot", "president",
+                                   "Crab", "stanley", "Harbor", "Noodles", "", "Learning", "Savages", "Teakwood",
+                                   "Chocolate", "Runner", "huskey", "Hiking", "Microsoft", "military"};
+    public static string WordGetter()
+    {
+        Random rand = new Random();
+        int index = rand.Next(mySecretWords.Length);
+        string word = mySecretWords[index];
+        // TESTING: word = "Rachel";
+        return word;
+    }
+}
+```
+#### MainWindow.xaml.cs
+
