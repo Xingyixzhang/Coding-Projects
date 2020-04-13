@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Hikers Home Page</title>
+        <link rel="stylesheet" type="text/css" href="Home.css">
+        <script> /* Add javascript codes. */
+            topButton = document.getElementById("topbtn");
+            
+            /* Show the button when the user scrolls down 20px from the top: */
+            window.onscroll = function(){scrollFunction()};
+            
+            function scrollFunction(){
+                if (document.body.scrollTop > 20
+                   || document.documentElement.scrollTop > 20){
+                    topButton.style.display = "block";
+                }
+                else{
+                    topButton.style.display = "none";
+                }
+            }
+            /* Scroll to the top of doc when the user clicks on the button: */
+            function topFunction(){
+                /* document.body.scrollTop = 0;   /* FOR SAFARI. */
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera.
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Hikers</h1>
+            <input class="topbtn" type="button" onclick="topFunction()" value="Back to Top">
+            <ol>
+                <li><a href="Xingyi's%20Home%20Page.html">Xingyi's Page</a></li>
+                <li><a href="Contact.html">Contacts</a></li>
+            </ol>
+        </header>
+        <section>
+            <form action="welcome.php" method="post">
+                Name: <input type="text" name="name"/><br>
+                Password: <input type="password" name="password"/><br>
+                <select name="countryChoice">
+                    <option selected>USA</option>
+                    <option>China</option>
+                    <option>Korea</option>
+                </select><br>
+                <select name="langChoice">
+                    <option selected>English</option>
+                    <option>Chinese</option>
+                    <option>Korean</option>
+                    <option>Spanish</option>
+                </select><br>
+                <input type="checkbox" name="isUser" checked="true" /> Esisting User?<br>
+                <input type="submit" value="Login" />
+            </form>
+        </section>
+        <footer>
+            <div style="text-align: center !important;"> &nbsp;
+                <a href="https://www.linkedin.com/in/xingyi-zhang/" target="_blank"><img alt="LinkedIn" src="images/LinkedIn.png" style="width:32px"></a>&nbsp; 
+                <a href="https://github.com/Xingyixzhang" target="_blank"> 
+                <img alt="Github" style="width: 40px" src="images/GitHub.png"></a>&nbsp;</div>
+        </footer>
+    </body>
+</html>
