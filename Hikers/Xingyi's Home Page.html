@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hikers</title>
-        <link rel="stylesheet" type="text/css" href="hikers.css">
+        <title>Xingyi's Home Page</title>
+        <link rel="stylesheet" type="text/css" href="Users.css">
         <script> /* Add javascript codes. */
             topButton = document.getElementById("topbtn");
             
@@ -27,21 +27,44 @@
     </head>
     <body>
         <header>
+            <h1>My Collection <b>&#128154;</b></h1>
             <input class="topbtn" type="button" onclick="topFunction()" value="Back to Top">
-            <h1>Hikers</h1>
-            <h2>National Parks</h2>
-            <nav class="row">
-            <div class="NationalParks"><a href="https://www.nps.gov/olym/index.htm" title="Olympic National Park">
-                <img src="../Hikers/images/Olympic%20National%20park.jpeg" alt="Olympic national park" style="width:80%;"><br>Olympic National Park</a></div>
-            <div class="NationalParks">
-                <a href="https://www.nps.gov/mora/index.htm" title="Mt. Rainier National Park">
-                <img src="../Hikers/images/reflection%20lake1.jpg" alt="Reflection Lake" style="width:80%;">
-                <br>Mt. Rainier National Park</a></div>
-            <div class="NationalParks"><a href="https://www.nps.gov/noca/index.htm" title="North Cascades National Park">
-                <img src="../Hikers/images/North%20Cascades%20boundry.jpg" alt="North cascades national park boundry" style="width:80%;"><br>North Cascades National Park</a></div>
+            <nav>
+                <ol>
+                    <li><a href="Hikers.html">Home</a></li>
+                    <li><a href="Contact.html">Contacts</a></li>
+                </ol>
             </nav>
         </header>
-        <section>
+        <section class="National-Parks">
+            <h2>National Parks</h2>
+            <div class="row">
+                <div class="wa-national-parks">
+                    <div class="state-flag"><a href="https://www.nps.gov/state/wa/index.htm" target="_blank"><img src="images/WA.png" alt="Washington State Flag" style="width: 5%;"></a><br></div>
+                    <div class="NationalPark"><a href="https://www.nps.gov/olym/index.htm" title="Olympic National Park">
+                    <img src="../Hikers/images/Olympic%20National%20park.jpeg" alt="Olympic national park" style="width:80%;"><br>Olympic National Park</a></div>
+                
+                    <div class="NationalPark">
+                    <a href="https://www.nps.gov/mora/index.htm" title="Mt. Rainier National Park">
+                    <img src="../Hikers/images/reflection%20lake1.jpg" alt="Reflection Lake" style="width:80%;">
+                    <br>Mt. Rainier National Park</a></div>
+                
+                    <div class="NationalPark"><a href="https://www.nps.gov/noca/index.htm" title="North Cascades National Park">
+                    <img src="../Hikers/images/North%20Cascades%20boundry.jpg" alt="North cascades national park boundry" style="width:80%;"><br>North Cascades National Park</a></div>
+                </div>
+                <div class="wy-national-parks">
+                    <div class="state-flag"><a href="https://www.nps.gov/state/wy/index.htm" target="_blank"><img src="images/WY.png" alt="Wyoming State Flag" style="width: 15%;"></a><br></div>
+                    <div class="NationalPark"><a href="https://www.nps.gov/yell/index.htm" title="Yellowstone National Park">
+                    <img src="../Hikers/images/Yellowstone_family_pic.jpg" style="width:80%;"><br>Yellowstone National Park</a></div>
+                </div>
+                <div class="ut-national-parks">
+                    <div class="state-flag"><a href="https://www.nps.gov/state/ut/index.htm" target="_blank" ><img src="images/UT.png" alt="Utah State Flag" style="width: 15%;"></a><br></div>
+                    <div class="NationalPark"><a href="https://www.nps.gov/arch/index.htm" title="Arches National Park">
+                    <img src="../Hikers/images/TopArchesNP.jpg" style="width:80%;"><br>Arches National Park</a></div>
+                </div>
+            </div>
+        </section>
+        <section class="Seasonal-Trails">
                 <h2>Seasonal Trails</h2>
                 <div class="Season">
                     <h3><img src="images/spring.jpg" alt="spring hike with vocano rock" style="width:80%;"><a href="https://www.wta.org/go-outside/seasonal-hikes/spring-destinations" title="Spring Hikes"><br>Spring</a></h3>
@@ -56,10 +79,11 @@
                 </div>
                 <div class="Season">
                 <h3><img src="images/winter.jpg" alt="winter snow fun" style="width:80%;"><a href="https://www.wta.org/go-outside/seasonal-hikes/winter-destinations" title="Winter Hikes"><br>Winter</a></h3>
-                <p>Ever thought about trying out some snowshoeing adventures? No need to hesitate, let's bring it on!</p>
+                    <p>Ever thought about trying out some snowshoeing adventures? No need to hesitate, let's bring it on!</p>
+                    <p>If you love the pure precious snow in the Washington mountains, check out these <a href="https://www.planetware.com/washington/top-rated-ski-resorts-in-washington-us-wa-53.htm" title="Top 10 ski resort in Washington" target="_blank">Top 10 Ski/Snowboarding resort</a>!</p>
                 </div>
         </section>
-        <section>
+        <section class="Trail-Types">
                 <h2>Trail Types</h2>
                 <div class="Trails">
                     <img src="images/Maple%20Pass.jpg" alt="Foot Trail at Maple Pass" style="width:90%;">
@@ -95,8 +119,9 @@
         </section>
         <footer id="main-footer">
                 <p>&copy; | Follow me on my 
-                    <a href="https://github.com/Xingyixzhang" title="github.com" target="_blank">Github</a> and 
-                    <a href="https://www.linkedin.com/in/xingyi-zhang/" title="Follow me on LinkedIn">LinkedIn</a>!</p>
+                    <a href="https://www.linkedin.com/in/xingyi-zhang/" target="_blank"><img alt="LinkedIn" src="images/LinkedIn.png" style="width:30px"></a> and 
+                    <a href="https://github.com/Xingyixzhang" target="_blank"> 
+                <img alt="Github" style="width:35px" src="images/GitHub.png"></a>!</p>
         </footer>
     </body>
 </html>
