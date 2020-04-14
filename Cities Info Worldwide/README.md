@@ -25,8 +25,9 @@ Razor comment will not be rendered by the Razor view Engine.
 if you want the comment to go to the user side but not showing to the user, use html comments. Razor comment won't go to the other side at all even when viewing the site in developer mode.
 
 Razor view engine is one type of view engines, which translate the HTML + C# into pure HTML for the browser
-Razor view engine can be customized, **Razor** is the **Default** view engine in MVC.
-
+**Razor** is the **Default** view engine in MVC, Razor view engine can be customized:
+1. Implement **IViewEngine** interface, which contains **FindView** method returning a **ViewEngineResult** object.
+2. Custom View Engines are **rarely created** since they require sophisticated string parsing code.
 
 - '@@': render the @ symbol to display in html page.
 - '@:': explicitly declare a line of text as **content** not **code**, (\<text>\</text>)
@@ -44,11 +45,39 @@ Razor view engine can be customized, **Razor** is the **Default** view engine in
         @i
     }
 }
-// Razor Froeach Code Block:
+@* Razor Froeach Code Block: *@
 @foreach (string name in ViewBag.Names){
     <span>@name </span>
 }
 ```
+- **Dependency Injection** into Views:
+1. Injecting a service directly into a view using "**@inject** \<type> \<instance name>" directive.
+2. Compare injecting services into Views and Controllers:
 
+|               |             **Views**             |             **Controllers**             |
+|---------------|-----------------------------------|-----------------------------------------|
+|               |     Transform ot format text      |              Retrieve Data              |
+| Services that |     Impact Visual Appearance      |       Depend on external resources      |
+|               | Required for repeated use in view |  Return consistent results for one view |
 ## Use HTML Helpers and Tag Helpers
+- HTML Helpers
+**Html.ActionLink** & **Url.Action** helpers render HTML that **calls controller actions**.
+1. **Html.ActionLink()** \-> [Does not require Explicit enabling of the feature]
+```cshtml
+@Html.ActionLink("Click here to view photo 1", "Display", new {id = 1})
+@*
+  <a href="/photo/display/1">
+      Click here to view photo 1
+  </a>
+*@
+```
+2. **Url.Action()**: Alternative to HTML helpers. \-> [Require Explicit directive usage]
+```cshtml
+@* This renders a URL by using the routing engine without rendering the enclosing <a> element. *@
+<img alt="This image came from an action" src="@Url.Action("GetImage", new {id = 1})" />
+@*
+    <img alt="This image came from an action" src="/photo/getimage/1" />
+*@
+```
+- Tag Helpers
 ## Reuse Code in Views
