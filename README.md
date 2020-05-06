@@ -18,7 +18,8 @@
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
-2. Self-Help
+2. Github Profile Card
+3. Self-Help
 
 ## Python Project
 1. (Forked) TicTacToe Console Game
