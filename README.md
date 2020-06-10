@@ -4,7 +4,8 @@
 1. (**C#**) Zodiac Signs, simple console app to identify your zodiac sign.
 2. (**C#**) Test BMI value and return weight categories.
 3. (**C#**) Date addition calculator.
-4. (**Java**) Mortgage Calculator
+4. (**Java**) Mortgage Calculator.
+5. (**Java**) Weight (lbs & ounces) Calculator.
 
 ## WPF Apps
 1. Hangman Game App
