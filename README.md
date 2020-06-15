@@ -7,21 +7,25 @@
 4. (**Java**) Mortgage Calculator.
 5. (**Java**) Weight (lbs & ounces) Calculator.
 
+## Web Development (HTML, CSS, JavaScript) Projects
+1. Hikers
+2. Github Profile Card
+3. Self-Help
+
 ## WPF Apps
 1. Hangman Game App
 2. Math Competition Game App
 3. Gomoku Game App (Windows Form)
+
+## GUI Projects
+1. (**Java**) Simple Addition Calculator
+2. (**Java**) Automobile Sales Tax Calculator
 
 ## ASP.NET Core MVC Practice Projects
 1. Ball Game Poll -- Configure Middleware and Services.
 2. World Traveler -- Develop Controllers.
 3. Cities Information Worldwide -- Develop Views.
 4. Butterfly Shop -- Develop Models.
-
-## Web Development (HTML, CSS, JavaScript) Projects
-1. Hikers
-2. Github Profile Card
-3. Self-Help
 
 ## Python Project
 1. (Forked) TicTacToe Console Game
