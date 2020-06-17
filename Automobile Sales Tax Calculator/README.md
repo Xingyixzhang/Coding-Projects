@@ -7,8 +7,8 @@ This program consists of four classes:
 1. A **constructor** that allows the make and purchase price to be initialized.
 2. A method named **salesTax** that returns the base sales tax computed as 5% of the sales price.
 3. A **toString** method that returns a string containing the make and model of the automobile, the sales price, and the sales tax, appropriately labeled.
-#### It also has two subclasses: 
-- **Electric**. It has an additional instance variable that contains its weight in pounds stored as an integer. 
+## Electric (subclass of Automobile). 
+It has an additional instance variable that contains its weight in pounds stored as an integer. 
 ```markdown
 It should have the same three methods:
 1. A **constructor** that allows the automobile’s make and model, purchase price and weight to
@@ -20,7 +20,8 @@ it is $150.
 3. An **overridden toString** method that returns a string containing the make and model of
 the automobile, the sales price, sales tax and the weight, appropriately labeled.
 ```
-- **Hybrid**. It has an additional instance variable that contains the number of miles per gallon stored as an integer. 
+## Hybrid (subclass of Automobile). 
+It has an additional instance variable that contains the number of miles per gallon stored as an integer. 
 ```markdown
 It should have the same three methods:
 1. A **constructor** that allows the automobile’s make and model, purchase price and miles per
