@@ -1,6 +1,7 @@
 Useful Links:
 
 [Basic Java Graphing Methods](https://mathbits.com/MathBits/Java/Graphics/GraphingMethods.htm)
+
 [Draw, Paint, Repaint](https://web.stanford.edu/class/archive/cs/cs108/cs108.1092/handouts/27PaintRepaint.pdf)
 
 # Geometric Drawing Project
