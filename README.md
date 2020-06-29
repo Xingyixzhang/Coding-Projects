@@ -20,6 +20,7 @@
 ## GUI Projects
 1. (**Java**) Simple Addition Calculator
 2. (**Java**) Automobile Sales Tax Calculator
+3. (**Java**) Geometric Drawing Panel
 
 ## ASP.NET Core MVC Practice Projects
 1. Ball Game Poll -- Configure Middleware and Services.
