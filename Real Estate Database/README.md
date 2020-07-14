@@ -1,4 +1,6 @@
 # Real Estate Database
+Helpful Resources: [Set Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/set.html), [Map Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/map.html)
+
 This program should be comprised of an enumerated type, an interface and two classes. The
 enumerated type should be named Status and should contain three enumeration literals,
 FOR_SALE, UNDER_CONTRACT and SOLD.
