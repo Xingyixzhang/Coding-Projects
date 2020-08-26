@@ -28,6 +28,7 @@
 3. (**Java**) Geometric Drawing Panel
 4. (**Java**) Real Estate Database
 5. (**Python**) Dice Rolling (Bar Graph)
+6. (**Python**) Dynamic Dice Rolling (Dynamic Bar Graphs)
 
 ## ASP.NET Core MVC Practice Projects
 1. Ball Game Poll -- Configure Middleware and Services.
