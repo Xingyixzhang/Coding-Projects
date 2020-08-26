@@ -10,6 +10,7 @@
 7. (**Python**) Math and Security functions
 8. (**Python**) Birthday Countdown
 9. (**Python**) Student grades
+10. (**Python**) Word Count
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
