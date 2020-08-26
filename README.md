@@ -9,6 +9,7 @@
 6. (**Python**) Voters registration form
 7. (**Python**) Math and Security functions
 8. (**Python**) Birthday Countdown
+9. (**Python**) Student grades
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
