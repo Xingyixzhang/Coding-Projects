@@ -22,6 +22,7 @@
 2. (**Java**) Automobile Sales Tax Calculator
 3. (**Java**) Geometric Drawing Panel
 4. (**Java**) Real Estate Database
+5. (**Python**) Dice Rolling (Bar Graph)
 
 ## ASP.NET Core MVC Practice Projects
 1. Ball Game Poll -- Configure Middleware and Services.
@@ -31,3 +32,5 @@
 
 ## Python Project
 1. (Forked) TicTacToe Console Game
+2. Voters registration form
+3. Math and Security functions
