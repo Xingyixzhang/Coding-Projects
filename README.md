@@ -6,6 +6,9 @@
 3. (**C#**) Date addition calculator.
 4. (**Java**) Mortgage Calculator.
 5. (**Java**) Weight (lbs & ounces) Calculator.
+6. (**Python**) Voters registration form
+7. (**Python**) Math and Security functions
+8. (**Python**) Birthday Countdown
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
@@ -29,9 +32,3 @@
 2. World Traveler -- Develop Controllers.
 3. Cities Information Worldwide -- Develop Views.
 4. Butterfly Shop -- Develop Models.
-
-## Python Project
-1. (Forked) TicTacToe Console Game
-2. Voters registration form
-3. Math and Security functions
-4. Birthday Countdown
