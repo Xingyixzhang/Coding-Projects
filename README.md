@@ -11,6 +11,7 @@
 8. (**Python**) Birthday Countdown
 9. (**Python**) Student grades
 10. (**Python**) Word Count
+11. (**Python**) State Info Lookup and Flowers
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
