@@ -12,6 +12,7 @@
 9. (**Python**) Student grades
 10. (**Python**) Word Count
 11. (**Python**) State Info Lookup and Flowers
+12. (**Python**) Matrix Math Game (Numpy & re)
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
