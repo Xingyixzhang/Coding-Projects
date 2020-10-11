@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Here</title>
+        <link rel= "stylesheet" type= "text/css" href="../static/styles/content_style.css">
+    </head>
+    <body>
+        <h1>-- Login Here --</h1>
+        <form action='/login.html' method="POST">
+            <div class='name'>
+                <label for='name'>Username</label>
+                <input type='text' name='name'>
+            </div>
+            <div class='password'>
+                <label for='password'>Password</label>
+                <input type='text' name='password'>
+            </div>
+            <div>
+                <input type="submit" class="submit" value="Log In">
+            </div>
+        </form>
+
+        <!-- Provide link for user to register if they don't have an account yet. -->
+        <p style="text-align: right;"><a href="/register.html">Register</a> Here</p>
+
+        <!-- If error occurs as defined in app.py, show it in page. -->
+        {% if error %}
+            <p>{{error}}</p>
+        {% endif %}
+    </body>
+</html>

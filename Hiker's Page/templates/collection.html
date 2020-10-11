@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Collection</title>
+        <link rel= "stylesheet" type= "text/css" href="../static/styles/content_style.css">
+    </head>
+    <body>
+        <h1>My Collections</h1>
+
+        <!-- Display the Menu in one row with link to each page -->
+        <div class="row">
+            <div class="col"><a href=home.html>Home Page</a></div>
+            <div class="col">View My Collections</div>
+            <div class="col"><a href=contact.html>Contact Information</a></div>
+        </div>
+
+        <h2>Personal Trips</h2>
+
+        <ul><b>States Visited</b><br><br>
+            <!-- Internal links to easily find each section by their name -->
+            <li><a href="#wa">Washington</a></li>
+            <li><a href="#ca">California</a></li>
+        </ul>
+
+        <div class="States">
+            <a name="wa"><h3>Washington</h3></a>
+            A home of<a href="https://beautifulwashington.com/wa/national-parks.html"> 3 U.S. National Parks</a>.<br><br>
+            
+            <!-- Pic and Overview for each national park visited -->
+            <img src="../static/images/mtrainier.jpg" alt="Mount Rainier National Park" style="width: 30%;"><br>
+            <p>
+                <b>Mt. Rainier</b>, the highest mountain in Washington state, was established in 1899 as the 5th US National Park covering over 236k acres.<br>
+                Mount Rainier is an active stratovolcanoe, which is currently “sleeping”.<br>
+                Unique plant and animal life together with a wide range of various outdoor recreation activities available at the territory of Mount Rainier National Park,<br>
+                attract approximately two million visitors annually.<br>
+            </p>
+
+            <img src="../static/images/northcascade.jpg" alt="North Cascades National Park" style="width: 30%;"><br>
+            <p>
+                <b>North Cascades National park</b> covers about 505k acres and offers an extremely wide range of recreation activities<br>
+                with the glaciated mountains of North Cascades being one of the most popular places among hikers, climbers and avid skiers.<br>
+                Currently the North Cascades National Park is viewed as one (and definitely the largest) of 3 units,<br>
+                constituting the North Cascades National Park Service Complex. Another two units of this complex are the Ross Lake National Recreation Area and Lake Chelan National Recreation Area.<br>
+            </p>
+
+            <img src="../static/images/olymic.jpg" alt="Olympic National Park" style="width: 30%;"><br>
+            <p>
+                <b>Olympic National Park</b> occupies the most territory of the Olympic Peninsula, covering the area of 922,650 acres.<br>
+                It is one of the most unique national parks of the United States, amazing natural diversity of which attracts more than three million visitors annually.<br>
+                Established on June 29, 1938 it continues to fascinate people coming from all over the world to enjoy this splendid treasure of Washington State.<br>
+                Beautiful coastline, breathtaking rainforests, gorgeous mountain peaks of the Olympic Mountains –<br>
+                Olympic National Park has everything to satisfy the demands and wishes of the most picky visitors.<br>
+            </p><br>
+
+            <a name="ca"><h3>California</h3>
+
+            Boasting <a href="https://www.visitcalifornia.com/things-to-do/national-parks/">9 national parks</a>, 
+            more than any other state—and each has its own unique appeal.<br><br>
+            <p>
+                <img src="../static/images/redwoodca.jpg" alt="Redwood National Park" style="width: 30%;"><br>
+                <a href="https://www.visitredwoods.com/explore-the-redwoods/redwood-national-park/"><b>Redwood National Park</b></a> is well-known to be the home of the tallest trees on Earth.<br>
+                This World Heritage Site and International Biosphere Reserve protects nearly half of the world’s old growth redwoods,<br>
+                including champion specimens more than 370 feet (113 meters) in height—or five stories taller than the Statue of Liberty.<br>
+                Walk, bike, camp or horseback ride along 200 miles of trails in the park system, which in a unique state/federal partnership includes Jedediah Smith Redwoods, Del Norte Coast Redwoods, and Prairie Creek Redwoods State Parks.<br>
+                The park’s forests, hills, rivers and coastline support a rich mosaic of life, including Roosevelt Elk, whales, seals and seasonal wildflowers such as lupine and rhododendron.<br>
+                The sprawling park system also provides many opportunities for scenic drives.
+            </p>
+            </a>
+        </div>
+    </body>
+
+    <!-- Display the date and time of visit in the footer section -->
+    <footer style="text-align: right;">Page visited at {{ datetime }}</footer>
+</html>
