@@ -13,6 +13,7 @@
 10. (**Python**) Word Count
 11. (**Python**) State Info Lookup and Flowers
 12. (**Python**) Matrix Math Game (Numpy & re)
+13. (**Python**) File Data Analysis (Panda & Matplotlib)
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
