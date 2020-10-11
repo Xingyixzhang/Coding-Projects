@@ -14,6 +14,7 @@
 11. (**Python**) State Info Lookup and Flowers
 12. (**Python**) Matrix Math Game (Numpy & re)
 13. (**Python**) File Data Analysis (Panda & Matplotlib)
+14. (**Python**) Hiker's Page (Flask & Passlib)
 
 ## Web Development (HTML, CSS, JavaScript) Projects
 1. Hikers
