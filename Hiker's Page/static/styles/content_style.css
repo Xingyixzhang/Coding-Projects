@@ -1,0 +1,78 @@
+h1, h2 {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+}
+
+.States {
+    text-align: center;
+    background-color: lightgreen;
+    color: black;
+}
+
+.topic {
+    background-color: lightgreen;
+    color: black;
+}
+
+.col {
+    float: left;
+    text-align: center;
+    width: 33.33%;
+    font-size: large;
+    font: bolder;
+    color: darkorchid;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Styles for the table and table contents */
+
+table {
+    border-color: darkgreen;
+    width: 100%; 
+    text-align: center;
+}
+
+summary {
+    font-size: x-large;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+details {
+    color: darkgreen;
+}
+
+.linkcol3 {
+    float: left;
+    text-align: center;
+    width: 33.33%;
+}
+
+.linkcol2 {
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+
+/* Styles for the register and login page */
+
+div {
+    margin-bottom: 5px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    float: left;
+    text-align: right;
+}
