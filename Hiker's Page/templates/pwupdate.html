@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Password</title>
+        <link rel= "stylesheet" type= "text/css" href="../static/styles/content_style.css">
+        <script type="text/javascript">
+            function check_pwds(form){
+                if (form.new_pwd.value == "" || form.confirm_pwd.value != form.new_pwd.value){
+                    alert("Error: Passwords don't match");
+                    form.new_pwd.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Update your Password</h1>
+
+        <form action='/pwupdate.html' method='POST' onsubmit="return check_pwds(this)">
+            <div>
+                <label for='name'>Username</label>
+                <input type='text' name='name'>
+            </div>
+            <div>
+                <label for='password'>Current Password</label>
+                <input type='password' name='password'>
+            </div>
+            <div>
+                <label>New Password</label>
+                <input type="password" name="new_pwd" required
+					   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$&+,:;=?@#|'<>.-^*()%!]).{12,}"
+					   title="Must contain at least one number and one uppercase and lowercase letter and special character, and at least 12 or more characters">
+            </div>
+            <div>
+                <label>Confirm Password</label>
+				<input type="password" name="confirm_pwd" required title="Please enter the same Password">
+            </div>
+            <div>
+                <input type="submit" class="submit" value="Reset Password">
+            </div>
+        </form>
+
+        <!-- If current password or username is not valid: -->
+        {% if error %}
+            <p>{{error}}</p>
+        {% endif %}
+
+    </body>
+</html>
