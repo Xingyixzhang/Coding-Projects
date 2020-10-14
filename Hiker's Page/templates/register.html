@@ -2,11 +2,30 @@
 <html>
     <head>
         <title>Hiker's Registration Form</title>
-        <link rel= "stylesheet" type= "text/css" href="../static/styles/content_style.css">
+		<link rel= "stylesheet" type= "text/css" href="../static/styles/content_style.css">
+		
+		<script type="text/javascript">
+            function check(form){
+                // Ensure the Username is not blank:
+                if (form.name.value == ""){
+                    alert("Error: Username cannot be Blank");
+                    form.name.focus();
+                    return false;
+                }
+
+                // Ensure the correct format of username:
+                re = /^\w+$/;
+                if (!re.test(form.username.value)) {
+                    alert("Error: Username must contain only letters, numbers and _");
+                    form.name.focus();
+                    return false;
+                }
+			}
+		</script>
     </head>
     <body>
         <h1>Hiker's Registration Form</h1>
-        <form action='/register.html' method="POST" enctype="multipart/form-data">
+        <form action='/register.html' method="POST" enctype="multipart/form-data" onsubmit="check(this)">
             <div>
                 <label for='name'>Name</label>
                 <input name='name' required>
@@ -91,6 +110,10 @@
             <div class="submit">
                 <input type="submit" value="register">
             </div>
-        </form>
+		</form>
+		<!-- If current password or username is not valid: -->
+        {% if error %}
+            <p>{{error}}</p>
+        {% endif %}
     </body>
 </html>
