@@ -2,7 +2,8 @@
 
 ### Dice Rolls
 
-### Scatter Squares
+### Scatter Squares (import matplotlib.pyplot as plt)
+![Squares Color Map](https://github.com/Xingyixzhang/Coding-Projects/blob/master/DataVisualizationPractices/saved_plots/squares_colormap.png)
 
 ### Random Walks
 
