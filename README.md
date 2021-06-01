@@ -1,4 +1,4 @@
-# Personal Coding Projects
+# Personal Coding Projects (*: individual repo)
 
 ## Console App
 1. (**C#**) Zodiac Signs, simple console app to identify your zodiac sign.
@@ -33,6 +33,8 @@
 4. (**Java**) Real Estate Database
 5. (**Python**) Dice Rolling (Bar Graph)
 6. (**Python**) Dynamic Dice Rolling (Dynamic Bar Graphs)
+*7. (**Python**) Space Defender
+8. (**Python**) Data Visualization Practices
 
 ## ASP.NET Core MVC Practice Projects
 1. Ball Game Poll -- Configure Middleware and Services.
