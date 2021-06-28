@@ -25,6 +25,7 @@
 1. Hangman Game App
 2. Math Competition Game App
 3. Gomoku Game App (Windows Form)
+4. ArcGIS Application (Display Map Practice)
 
 ## GUI Projects
 1. (**Java**) Simple Addition Calculator
@@ -33,7 +34,7 @@
 4. (**Java**) Real Estate Database
 5. (**Python**) Dice Rolling (Bar Graph)
 6. (**Python**) Dynamic Dice Rolling (Dynamic Bar Graphs)
-*7. (**Python**) Space Defender
+7. (**Python**) Space Defender
 8. (**Python**) Data Visualization Practices
 
 ## ASP.NET Core MVC Practice Projects
